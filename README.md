@@ -4,3 +4,7 @@ Hardware based TRNG using a noise entropy source and von neumann debiasing.use a
 
 This project implements a **hardware-based True Random Number Generator (TRNG)** using ring oscillators on a Xilinx Spartan-7 FPGA 
 The TRNG exploits clock jitter from multiple ring oscillators, uses XOR trees to combine entropy, and applies **Von Neumann debiasing** to produce a statistically unbiased random bitstream. Both **8-bit** and **32-bit** versions of the TRNG were implemented on FPGA  and evaluated Area,Power and Timing in FPGA & ASIC
+
+## 🔧 System Block Diagram
+
+![TRNG Block Diagram](reports/block_diag.png)
