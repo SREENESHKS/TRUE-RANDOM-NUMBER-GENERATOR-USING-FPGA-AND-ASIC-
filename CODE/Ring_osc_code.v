@@ -1,5 +1,4 @@
-
-module ring_oscillator #(parameter ID = 0)(
+module ring_oscillator (
     input enable,
     output reg ro_out
 );
@@ -7,9 +6,9 @@ module ring_oscillator #(parameter ID = 0)(
 
     always begin
         if (enable) begin
-            #((ID+1)*3) ro_out = ~ro_out; // Different toggle delay for each oscillator
+            #5 ro_out = ~ro_out;  // toggle with fixed delay
         end else begin
-            #10; // do nothing when disabled
+            #10; // wait when disabled
         end
     end
 endmodule
